@@ -30,7 +30,25 @@ namespace ExamForm
 
         private void GoButton_Click(object sender, EventArgs e)
         {
-            OutputRTB.Text = "Nothing happened...";
+            for (int i = 1; i < 101; i++)
+            {
+                if ((i%3 == 0) && (i%5 == 0))
+                {
+                    OutputRTB.AppendText(Environment.NewLine + BuzzTextBox.Text + FizzTextBox.Text);
+                }
+                else if (i%3 == 0)
+                {
+                    OutputRTB.AppendText(Environment.NewLine + BuzzTextBox.Text);
+                }
+                else if (i%5 == 0)
+                {
+                    OutputRTB.AppendText(Environment.NewLine + FizzTextBox.Text);
+                }
+                else
+                {
+                    OutputRTB.AppendText(Environment.NewLine + i);
+                }
+            }
         }
     }
 }
