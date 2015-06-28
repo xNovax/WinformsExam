@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.DescriptionLabel = new System.Windows.Forms.Label();
             this.OutputRTB = new System.Windows.Forms.RichTextBox();
-            this.FizzTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.BuzzTextBox = new System.Windows.Forms.TextBox();
+            this.BuzzLabel = new System.Windows.Forms.Label();
+            this.FizzLabel = new System.Windows.Forms.Label();
+            this.FizzTextBox = new System.Windows.Forms.TextBox();
             this.GoButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.HintLabel = new System.Windows.Forms.Label();
@@ -63,43 +63,43 @@
             this.OutputRTB.TabIndex = 4;
             this.OutputRTB.Text = "<Output should go here and each number should be on a new line>";
             // 
-            // FizzTextBox
-            // 
-            this.FizzTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FizzTextBox.Location = new System.Drawing.Point(133, 28);
-            this.FizzTextBox.Name = "FizzTextBox";
-            this.FizzTextBox.Size = new System.Drawing.Size(124, 20);
-            this.FizzTextBox.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Buzz: ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Fizz: ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // BuzzTextBox
             // 
             this.BuzzTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BuzzTextBox.Location = new System.Drawing.Point(133, 3);
+            this.BuzzTextBox.Location = new System.Drawing.Point(133, 28);
             this.BuzzTextBox.Name = "BuzzTextBox";
             this.BuzzTextBox.Size = new System.Drawing.Size(124, 20);
-            this.BuzzTextBox.TabIndex = 1;
+            this.BuzzTextBox.TabIndex = 2;
+            // 
+            // BuzzLabel
+            // 
+            this.BuzzLabel.AutoSize = true;
+            this.BuzzLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BuzzLabel.Location = new System.Drawing.Point(3, 25);
+            this.BuzzLabel.Name = "BuzzLabel";
+            this.BuzzLabel.Size = new System.Drawing.Size(124, 25);
+            this.BuzzLabel.TabIndex = 3;
+            this.BuzzLabel.Text = "Buzz: ";
+            this.BuzzLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // FizzLabel
+            // 
+            this.FizzLabel.AutoSize = true;
+            this.FizzLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FizzLabel.Location = new System.Drawing.Point(3, 0);
+            this.FizzLabel.Name = "FizzLabel";
+            this.FizzLabel.Size = new System.Drawing.Size(124, 25);
+            this.FizzLabel.TabIndex = 5;
+            this.FizzLabel.Text = "Fizz: ";
+            this.FizzLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // FizzTextBox
+            // 
+            this.FizzTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FizzTextBox.Location = new System.Drawing.Point(133, 3);
+            this.FizzTextBox.Name = "FizzTextBox";
+            this.FizzTextBox.Size = new System.Drawing.Size(124, 20);
+            this.FizzTextBox.TabIndex = 1;
             // 
             // GoButton
             // 
@@ -119,13 +119,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.FizzLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.OutputRTB, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.BuzzLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.GoButton, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.DescriptionLabel, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.BuzzTextBox, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.FizzTextBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.FizzTextBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BuzzTextBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.HintLabel, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -169,10 +169,10 @@
 
         private System.Windows.Forms.Label DescriptionLabel;
         private System.Windows.Forms.RichTextBox OutputRTB;
-        private System.Windows.Forms.TextBox FizzTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox BuzzTextBox;
+        private System.Windows.Forms.Label BuzzLabel;
+        private System.Windows.Forms.Label FizzLabel;
+        private System.Windows.Forms.TextBox FizzTextBox;
         private System.Windows.Forms.Button GoButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label HintLabel;

@@ -27,15 +27,15 @@ namespace ExamForm
             {
                 if ((i%3 == 0) && (i%5 == 0))
                 {
-                    OutputRTB.AppendText(Environment.NewLine + BuzzTextBox.Text + FizzTextBox.Text);
+                    OutputRTB.AppendText(Environment.NewLine + FizzTextBox.Text + BuzzTextBox.Text);
                 }
                 else if (i%3 == 0)
                 {
-                    OutputRTB.AppendText(Environment.NewLine + BuzzTextBox.Text);
+                    OutputRTB.AppendText(Environment.NewLine + FizzTextBox.Text);
                 }
                 else if (i%5 == 0)
                 {
-                    OutputRTB.AppendText(Environment.NewLine + FizzTextBox.Text);
+                    OutputRTB.AppendText(Environment.NewLine + BuzzTextBox.Text);
                 }
                 else
                 {
